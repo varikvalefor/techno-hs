@@ -10,7 +10,7 @@ printThing :: Char -> IO ();
 printThing a = giveMeALine a >> drawCursor;
 
 drawCursor :: IO ();
-drawCursor = mapM_ g "' \BS, \BS"
+drawCursor = mapM_ g "\" \BS_ \BS"
   where g x | x == ' ' = threadDelay 50000
             | otherwise = putStr (x:"")
 
