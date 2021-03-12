@@ -1,4 +1,5 @@
 import Control.Concurrent;
+import System.IO;
 
 giveMeALine :: Char -> IO ();
 giveMeALine x = putStr (x:"") >> drawCursor;
@@ -12,4 +13,5 @@ playTechno :: IO ();
 playTechno = return ();
 
 main :: IO ();
-main = forkIO playTechno >> mapM_ giveMeALine "TECHNO   " >> main;
+main = hSetBuffering stdout NoBuffering >>
+  forkIO playTechno >> mapM_ giveMeALine "TECHNO   " >> main;
