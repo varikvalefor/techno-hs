@@ -1,0 +1,4 @@
+-As of 20210312, TECHNO must be run under TMUX.
+	When the cursor characters are deleted, the terminal "forgets" the
+	position of the cursor and does not create newlines.
+	Although TMUX fixes this problem, a superior solution is desired.
