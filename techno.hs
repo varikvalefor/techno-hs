@@ -8,5 +8,8 @@ drawCursor = mapM_ g "\" \BS_ \BS"
   where g x | x == ' ' = threadDelay 33333
             | otherwise = putStr $ x:""
 
+playTechno :: IO ();
+playTechno = return ();
+
 main :: IO ();
-main = mapM_ giveMeALine "TECHNO   " >> main;
+main = forkIO playTechno >> mapM_ giveMeALine "TECHNO   " >> main;
