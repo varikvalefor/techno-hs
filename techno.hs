@@ -1,7 +1,7 @@
 import Control.Concurrent;
 
 giveMeALine :: Char -> IO ();
-giveMeALine x = putStr (x:"") >> threadDelay 12500 >> drawCursor;
+giveMeALine x = putStr (x:"") >> drawCursor;
 
 theString :: String;
 theString = "TECHNO   ";
