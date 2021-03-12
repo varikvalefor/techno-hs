@@ -6,9 +6,6 @@ giveMeALine x = putStr (x:"") >> drawCursor;
 theString :: String;
 theString = "TECHNO   ";
 
-printThing :: Char -> IO ();
-printThing a = giveMeALine a >> drawCursor;
-
 drawCursor :: IO ();
 drawCursor = mapM_ g "\" \BS_ \BS"
   where g x | x == ' ' = threadDelay 50000
