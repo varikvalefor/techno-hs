@@ -8,4 +8,4 @@ drawCursor = mapM_ g "\" \BS_ \BS"
   where g x | x == ' ' = threadDelay 33333
             | otherwise = putStr (x:"")
 
-main = mapM_ (giveMeALine) "TECHNO   " >> main;
+main = mapM_ giveMeALine "TECHNO   " >> main;
