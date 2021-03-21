@@ -11,6 +11,7 @@ drawCursor = mapM_ g "\" \BS_ \BS"
 
 playTechno :: IO ();
 playTechno = return ();
+-- TODO: GENERATE TECHNO SONG.
 
 main :: IO ();
 main = hSetBuffering stdout NoBuffering >>
